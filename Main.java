@@ -2,14 +2,11 @@ package com.company;
 
 import java.io.*;
 
-public class Main {//ljepyoetyljy
-    //
+public class Main {
 
     public static void main(String[] args) {
         try(BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
-            BufferedWriter fileWthCode = new BufferedWriter(new FileWriter("fileWthCode.txt"));/*uoyyehfqaeiaer
-            evjaivai
-            avjioajfv*/
+            BufferedWriter fileWthCode = new BufferedWriter(new FileWriter("fileWthCode.txt"));
             BufferedReader rd1 = new BufferedReader(new FileReader("fileWthCode.txt"));
             BufferedWriter fileWthEditedCode = new BufferedWriter(new FileWriter("fileWthEditedCode.txt"));){
 
@@ -24,7 +21,7 @@ public class Main {//ljepyoetyljy
                 txt1+=txt +"\n";
             }
             String EditTxt1 = txt1.replaceAll("(//.+)|(//)", "");
-            String EditTxt2 = EditTxt1.replaceAll("/\\*(.|\\s|.&&\\s)*?\\*/", "");  // /\\*(?s).*?\\*/
+            String EditTxt2 = EditTxt1.replaceAll("/\\*(.|\\s|.&&\\s)*?\\*/", "");
             fileWthEditedCode.write(EditTxt2);
         }
         catch(IOException ex){
